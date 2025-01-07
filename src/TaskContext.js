@@ -14,7 +14,7 @@ setTasks(storedTasks);
     //effacer une tache
     const deleteTask=(id) => setTasks(tasks.filter((task)=>task.id!==id));
     // la mise à jour des taches
-    const updateTask=(updatedTask,id)=> setTasks(tasks.map((task)=>task.id===updatedTask.id?updatedTask:task))  
+    const updateTask=(updatedTask)=> setTasks(tasks.map((task)=>task.id===updatedTask.id?{...updatedTask}:task))  
 return(
     <TaskContext.Provider value={{tasks,addTask,deleteTask,updateTask}}>{children}</TaskContext.Provider>
 )   
