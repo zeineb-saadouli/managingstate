@@ -4,14 +4,14 @@ import TaskItem  from "./TaskItem";
 function TaskList () {
     const {tasks}=useContext(TaskContext);
   return (
-    <div>
+    
       <ul>
         {tasks.map((task)=>(
             <TaskItem task={task} key={task.id}/>
         ))
         }
       </ul>
-    </div>
+    
   )
 }
 
